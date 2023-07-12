@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace HanzoAsashi\LaravelBpjsBridging\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelBpjsBridgingCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-bpjs-bridging';
 
     public $description = 'My command';
 
