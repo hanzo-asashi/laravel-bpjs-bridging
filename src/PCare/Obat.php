@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Obat extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'obat';
 
     public function dpho($keyword): static
