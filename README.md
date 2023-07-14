@@ -12,7 +12,7 @@ This is where your description should go. Limit it to a paragraph or two. Consid
 You can install the package via composer:
 
 ```bash
-composer require hanzoasashi/laravel-bpjs-bridging
+composer require hanzo-asashi/laravel-bpjs-bridging
 ```
 
 You can publish and run the migrations with:
