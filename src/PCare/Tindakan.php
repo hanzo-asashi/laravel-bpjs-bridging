@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Tindakan extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'tindakan';
 
     public function kodeTkp($kodeTkp): static

@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Kelompok extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'kelompok';
 
     public function club($kodeJenisKelompok): static

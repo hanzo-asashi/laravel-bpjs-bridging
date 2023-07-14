@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Pendaftaran extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'pendaftaran';
 
     public function peserta($nomorKartu): static

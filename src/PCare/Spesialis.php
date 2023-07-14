@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Spesialis extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'spesialis';
 
     public function rujuk(): static

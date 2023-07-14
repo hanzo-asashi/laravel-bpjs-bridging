@@ -4,9 +4,6 @@ namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Kunjungan extends PcareService
 {
-    /**
-     * @var string
-     */
     protected string $feature = 'kunjungan';
 
     public function rujukan($nomorKunjungan): static
