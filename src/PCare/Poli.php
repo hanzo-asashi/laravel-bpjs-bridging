@@ -9,7 +9,7 @@ class Poli extends PcareService
      */
     protected string $feature = 'poli';
 
-    public function fktp()
+    public function fktp(): static
     {
         $this->feature .= '/fktp';
 
