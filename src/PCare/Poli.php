@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Poli extends PcareService
 {
@@ -11,7 +11,8 @@ class Poli extends PcareService
 
     public function fktp()
     {
-        $this->feature .= "/fktp";
+        $this->feature .= '/fktp';
+
         return $this;
     }
 }

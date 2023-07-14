@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace HanzoAsashi\LaravelBpjsBridging\PCare;
@@ -12,92 +13,60 @@ class PcareService
 {
     /**
      * Guzzle HTTP Client object
-     * @var \GuzzleHttp\Client
      */
     private Client $clients;
 
     /**
      * Request headers
-     * @var array
      */
     private array $headers;
 
     /**
      * X-cons-id header value
-     * @var int
      */
     private int $consId;
 
     /**
      * X-Timestamp header value
-     * @var string
      */
     private string $timestamp;
 
     /**
      * X-Signature header value
-     * @var string
      */
     private string $signature;
 
     /**
      * X-Authorization header value
-     * @var string
      */
     private string $authorization;
 
-    /**
-     * @var string
-     */
     private string $secretKey;
 
-    /**
-     * @var string
-     */
     private string $username;
 
-    /**
-     * @var string
-     */
     private string $password;
 
-    /**
-     * @var string
-     */
     private string $appCode;
 
-    /**
-     * @var string
-     */
     private string $baseUrl;
 
-    /**
-     * @var string
-     */
     private string $serviceName;
 
-    /**
-     * @var string
-     */
     private string $userKey;
 
-    /**
-     * @var string
-     */
     protected string $feature;
 
-    /**
-     * @var string
-     */
     public string $keyDecrypt;
 
     public const CONTENT_TYPE = 'text/plain';
+
     public const ACCEPT_HEADER = 'application/json';
 
     public function __construct($configurations = [])
     {
         $this->clients = new Client([
-            'verify' => false
+            'verify' => false,
         ]);
 
         foreach ($configurations as $key => $val) {
@@ -113,6 +82,7 @@ class PcareService
     public function keyword($keyword): static
     {
         $this->feature .= "/{$keyword}";
+
         return $this;
     }
 
@@ -123,25 +93,24 @@ class PcareService
     {
         // ubah ke array
         $responseArray = json_decode($response, true, 512, JSON_THROW_ON_ERROR);
-        if (!is_array($responseArray)) {
+        if (! is_array($responseArray)) {
             return [
                 'metaData' => [
                     'message' => $responseArray,
-                    'code' => 201
-                ]
+                    'code' => 201,
+                ],
             ];
         }
 
-        if (!isset($responseArray['response'])) {
+        if (! isset($responseArray['response'])) {
             return $responseArray;
         }
-
 
         $responseDecrypt = $this->stringDecrypt($responseArray['response']);
         $responseArrayDecrypt = json_decode($responseDecrypt, true, 512, JSON_THROW_ON_ERROR);
 
         // apabila bukan array
-        if (!is_array($responseArrayDecrypt) || $responseDecrypt === '') {
+        if (! is_array($responseArrayDecrypt) || $responseDecrypt === '') {
             return $responseArray;
         }
 
@@ -159,7 +128,7 @@ class PcareService
         if ($start !== null && $limit !== null) {
             $response = $this->get("{$feature}/{$start}/{$limit}");
         } else {
-            $response = $this->get((string)($feature));
+            $response = $this->get((string) ($feature));
         }
 
         return $this->responseDecoded($response);
@@ -183,6 +152,7 @@ class PcareService
         } else {
             $response = $this->get($feature);
         }
+
         return $this->responseDecoded($response);
     }
 
@@ -192,6 +162,7 @@ class PcareService
     public function store($data = [])
     {
         $response = $this->post($this->feature, $data);
+
         return $this->responseDecoded($response);
     }
 
@@ -201,6 +172,7 @@ class PcareService
     public function update($data = [])
     {
         $response = $this->put($this->feature, $data);
+
         return $this->responseDecoded($response);
     }
 
@@ -210,6 +182,7 @@ class PcareService
     public function destroy($keyword = null, $parameters = [])
     {
         $response = $this->delete($this->feature, $keyword, $parameters);
+
         return $this->responseDecoded($response);
     }
 
@@ -229,9 +202,10 @@ class PcareService
     protected function setTimestamp(): static
     {
         date_default_timezone_set('UTC');
-        $this->timestamp = (string)(time() - strtotime('1970-01-01 00:00:00'));
+        $this->timestamp = (string) (time() - strtotime('1970-01-01 00:00:00'));
 
         date_default_timezone_set(config('bpjs-bridging.app_timezone'));
+
         return $this;
     }
 
@@ -246,6 +220,7 @@ class PcareService
         $encodedSignature = base64_encode($signature);
         $this->keyDecrypt = "$this->consId$this->secretKey$this->timestamp";
         $this->signature = $encodedSignature;
+
         return $this;
     }
 
@@ -254,6 +229,7 @@ class PcareService
         $data = "{$this->username}:{$this->password}:{$this->appCode}";
         $encodedAuth = base64_encode($data);
         $this->authorization = "Basic {$encodedAuth}";
+
         return $this;
     }
 
@@ -300,7 +276,7 @@ class PcareService
                 'GET',
                 "{$this->baseUrl}/{$this->serviceName}/{$feature}{$this->getParams($parameters)}",
                 [
-                    'headers' => $this->headers
+                    'headers' => $this->headers,
                 ]
             )->getBody()->getContents();
         } catch (\Exception $e) {
@@ -316,7 +292,7 @@ class PcareService
     {
         $this->setHeaderContent();
 
-        if (!empty($headers)) {
+        if (! empty($headers)) {
             $this->headers = array_merge($this->headers, $headers);
         }
         try {
@@ -360,9 +336,9 @@ class PcareService
         } catch (GuzzleException $e) {
             $response = $e->getMessage();
         }
+
         return $response;
     }
-
 
     protected function delete($feature, $id, $parameters = []): string
     {
@@ -386,6 +362,7 @@ class PcareService
         } catch (GuzzleException $e) {
             $response = $e->getMessage();
         }
+
         return $response;
     }
 
@@ -399,7 +376,7 @@ class PcareService
                 $params .= "/{$key}/{$value}";
             }
         }
+
         return $params;
     }
-
 }

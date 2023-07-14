@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Obat extends PcareService
 {
@@ -12,12 +12,14 @@ class Obat extends PcareService
     public function dpho($keyword)
     {
         $this->feature .= "/dpho/{$keyword}";
+
         return $this;
     }
 
     public function kunjungan($nomorKunjungan)
     {
         $this->feature .= "/kunjungan/{$nomorKunjungan}";
+
         return $this;
     }
 }

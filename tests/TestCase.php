@@ -2,9 +2,9 @@
 
 namespace HanzoAsashi\LaravelBpjsBridging\Tests;
 
+use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridgingServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridgingServiceProvider;
 
 class TestCase extends Orchestra
 {

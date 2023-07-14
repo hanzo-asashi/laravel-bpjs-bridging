@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Peserta extends PcareService
 {
@@ -12,6 +12,7 @@ class Peserta extends PcareService
     public function jenisKartu($jenisKartu)
     {
         $this->feature .= "/{$jenisKartu}";
+
         return $this;
     }
 }

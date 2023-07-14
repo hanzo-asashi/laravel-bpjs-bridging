@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Mcu extends PcareService
 {
@@ -12,6 +12,7 @@ class Mcu extends PcareService
     public function kunjungan($nomorKunjungan)
     {
         $this->feature .= "/kunjungan/{$nomorKunjungan}";
+
         return $this;
     }
 }

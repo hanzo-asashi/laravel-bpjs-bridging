@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Kunjungan extends PcareService
 {
@@ -12,12 +12,14 @@ class Kunjungan extends PcareService
     public function rujukan($nomorKunjungan)
     {
         $this->feature .= "/rujukan/{$nomorKunjungan}";
+
         return $this;
     }
 
     public function riwayat($nomorKartu)
     {
         $this->feature .= "/peserta/{$nomorKartu}";
+
         return $this;
     }
 }

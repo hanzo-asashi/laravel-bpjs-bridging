@@ -2,9 +2,9 @@
 
 namespace HanzoAsashi\LaravelBpjsBridging;
 
+use HanzoAsashi\LaravelBpjsBridging\Commands\LaravelBpjsBridgingCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use HanzoAsashi\LaravelBpjsBridging\Commands\LaravelBpjsBridgingCommand;
 
 class LaravelBpjsBridgingServiceProvider extends PackageServiceProvider
 {

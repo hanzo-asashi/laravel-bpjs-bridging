@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Pendaftaran extends PcareService
 {
@@ -12,24 +12,28 @@ class Pendaftaran extends PcareService
     public function peserta($nomorKartu)
     {
         $this->feature .= "/peserta/{$nomorKartu}";
+
         return $this;
     }
 
     public function tanggalDaftar($tanggalDaftar)
     {
         $this->feature .= "/tglDaftar/{$tanggalDaftar}";
+
         return $this;
     }
 
     public function nomorUrut($nomorUrut)
     {
         $this->feature .= "/noUrut/{$nomorUrut}";
+
         return $this;
     }
 
     public function kodePoli($kodePoli)
     {
         $this->feature .= "/kdPoli/{$kodePoli}";
+
         return $this;
     }
 }

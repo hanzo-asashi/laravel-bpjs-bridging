@@ -7,7 +7,7 @@ return [
         'consid' => env('BPJS_CONSID', ''),
         'secret_key' => env('BPJS_SCREET_KEY', ''),
         'url' => env('BPJS_BASE_URL', 'https://new-api.bpjs-kesehatan.go.id:8080'),
-        'service_name' => env('BPJS_SERVICE_NAME','new-vclaim-rest')
+        'service_name' => env('BPJS_SERVICE_NAME', 'new-vclaim-rest'),
     ],
 
     'pcare' => [
@@ -17,6 +17,6 @@ return [
         'password' => env('BPJS_PCARE_PASSWORD', ''),
         'app_code' => env('BPJS_PCARE_APP_CODE', '095'),
         'url' => env('BPJS_PCARE_BASE_URL', 'https://dvlp.bpjs-kesehatan.go.id:9081'),
-        'service_name' => env('BPJS_PCARE_SERVICE_NAME','pcare-rest-v3.0')
+        'service_name' => env('BPJS_PCARE_SERVICE_NAME', 'pcare-rest-v3.0'),
     ],
 ];

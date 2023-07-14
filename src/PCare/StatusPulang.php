@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class StatusPulang extends PcareService
 {
@@ -12,6 +12,7 @@ class StatusPulang extends PcareService
     public function rawatInap($status = true)
     {
         $this->feature .= "/rawatInap/{$status}";
+
         return $this;
     }
 }

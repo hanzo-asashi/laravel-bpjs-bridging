@@ -1,6 +1,6 @@
-<?php namespace AamDsam\Bpjs\PCare;
+<?php
 
-use AamDsam\Bpjs\PCare\PcareService;
+namespace AamDsam\Bpjs\PCare;
 
 class Kelompok extends PcareService
 {
@@ -12,6 +12,7 @@ class Kelompok extends PcareService
     public function club($kodeJenisKelompok)
     {
         $this->feature .= "/club/{$kodeJenisKelompok}";
+
         return $this;
     }
 
@@ -19,6 +20,7 @@ class Kelompok extends PcareService
     {
         // {bulan} for get or {edu id} for delete
         $this->feature .= "/kegiatan/{$parameter}";
+
         return $this;
     }
 
@@ -28,6 +30,7 @@ class Kelompok extends PcareService
         if ($nomorKartu !== null) {
             $this->feature .= "/{$nomorKartu}";
         }
+
         return $this;
     }
 }
