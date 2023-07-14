@@ -1,22 +1,22 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Obat extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'obat';
+    protected string $feature = 'obat';
 
-    public function dpho($keyword)
+    public function dpho($keyword): static
     {
         $this->feature .= "/dpho/{$keyword}";
 
         return $this;
     }
 
-    public function kunjungan($nomorKunjungan)
+    public function kunjungan($nomorKunjungan): static
     {
         $this->feature .= "/kunjungan/{$nomorKunjungan}";
 

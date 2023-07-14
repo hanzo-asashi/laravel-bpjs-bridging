@@ -1,36 +1,36 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Pendaftaran extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'pendaftaran';
+    protected string $feature = 'pendaftaran';
 
-    public function peserta($nomorKartu)
+    public function peserta($nomorKartu): static
     {
         $this->feature .= "/peserta/{$nomorKartu}";
 
         return $this;
     }
 
-    public function tanggalDaftar($tanggalDaftar)
+    public function tanggalDaftar($tanggalDaftar): static
     {
         $this->feature .= "/tglDaftar/{$tanggalDaftar}";
 
         return $this;
     }
 
-    public function nomorUrut($nomorUrut)
+    public function nomorUrut($nomorUrut): static
     {
         $this->feature .= "/noUrut/{$nomorUrut}";
 
         return $this;
     }
 
-    public function kodePoli($kodePoli)
+    public function kodePoli($kodePoli): static
     {
         $this->feature .= "/kdPoli/{$kodePoli}";
 

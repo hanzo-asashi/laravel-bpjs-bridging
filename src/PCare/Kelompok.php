@@ -1,22 +1,22 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Kelompok extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'kelompok';
+    protected string $feature = 'kelompok';
 
-    public function club($kodeJenisKelompok)
+    public function club($kodeJenisKelompok): static
     {
         $this->feature .= "/club/{$kodeJenisKelompok}";
 
         return $this;
     }
 
-    public function kegiatan($parameter)
+    public function kegiatan($parameter): static
     {
         // {bulan} for get or {edu id} for delete
         $this->feature .= "/kegiatan/{$parameter}";
@@ -24,7 +24,7 @@ class Kelompok extends PcareService
         return $this;
     }
 
-    public function peserta($eduId, $nomorKartu = null)
+    public function peserta($eduId, $nomorKartu = null): static
     {
         $this->feature = "/peserta/{$eduId}";
         if ($nomorKartu !== null) {

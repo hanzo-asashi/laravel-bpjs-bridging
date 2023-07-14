@@ -1,10 +1,10 @@
 <?php
 
-namespace AamDsam\Bpjs\VClaim;
+namespace HanzoAsashi\LaravelBpjsBridging\VClaim;
 
-use AamDsam\Bpjs\BpjsService;
+use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridging;
 
-class Sep extends BpjsService
+class Sep extends LaravelBpjsBridging
 {
     public function insertSEP($data = [])
     {

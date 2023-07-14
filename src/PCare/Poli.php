@@ -1,13 +1,13 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Poli extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'poli';
+    protected string $feature = 'poli';
 
     public function fktp()
     {

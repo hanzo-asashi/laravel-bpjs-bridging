@@ -1,10 +1,10 @@
 <?php
 
-namespace AamDsam\Bpjs\VClaim;
+namespace HanzoAsashi\LaravelBpjsBridging\VClaim;
 
-use AamDsam\Bpjs\BpjsService;
+use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridging;
 
-class Referensi extends BpjsService
+class Referensi extends LaravelBpjsBridging
 {
     public function diagnosa($keyword)
     {

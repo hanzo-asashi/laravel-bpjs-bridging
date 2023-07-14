@@ -1,11 +1,11 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Provider extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'provider';
+    protected string $feature = 'provider';
 }

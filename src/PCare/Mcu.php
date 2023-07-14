@@ -1,15 +1,15 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Mcu extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'mcu';
+    protected string $feature = 'mcu';
 
-    public function kunjungan($nomorKunjungan)
+    public function kunjungan($nomorKunjungan): static
     {
         $this->feature .= "/kunjungan/{$nomorKunjungan}";
 

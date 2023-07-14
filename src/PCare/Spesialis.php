@@ -1,22 +1,22 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Spesialis extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'spesialis';
+    protected string $feature = 'spesialis';
 
-    public function rujuk()
+    public function rujuk(): static
     {
         $this->feature .= '/rujuk';
 
         return $this;
     }
 
-    public function subSpesialis($kodeSpesialis = null)
+    public function subSpesialis($kodeSpesialis = null): static
     {
         $this->feature .= '/subspesialis';
         if ($kodeSpesialis !== null) {
@@ -26,7 +26,7 @@ class Spesialis extends PcareService
         return $this;
     }
 
-    public function sarana($kodeSarana = null)
+    public function sarana($kodeSarana = null): static
     {
         $this->feature .= '/sarana';
         if ($kodeSarana !== null) {
@@ -36,14 +36,14 @@ class Spesialis extends PcareService
         return $this;
     }
 
-    public function tanggalRujuk($tanggalRujuk)
+    public function tanggalRujuk($tanggalRujuk): static
     {
         $this->feature .= "/tglEstRujuk/{$tanggalRujuk}";
 
         return $this;
     }
 
-    public function khusus($kodeKhusus = null)
+    public function khusus($kodeKhusus = null): static
     {
         $this->feature .= '/khusus';
         if ($kodeKhusus !== null) {
@@ -53,7 +53,7 @@ class Spesialis extends PcareService
         return $this;
     }
 
-    public function nomorKartu($nomorKartu = null)
+    public function nomorKartu($nomorKartu = null): static
     {
         $this->feature .= '/noKartu';
         if ($nomorKartu !== null) {

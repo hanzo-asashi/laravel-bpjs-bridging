@@ -1,10 +1,10 @@
 <?php
 
-namespace AamDsam\Bpjs\VClaim;
+namespace HanzoAsashi\LaravelBpjsBridging\VClaim;
 
-use AamDsam\Bpjs\BpjsService;
+use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridging;
 
-class Monitoring extends BpjsService
+class Monitoring extends LaravelBpjsBridging
 {
     public function dataKunjungan($tglSep, $jnsPelayanan)
     {

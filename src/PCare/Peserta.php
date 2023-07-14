@@ -1,15 +1,15 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Peserta extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'peserta';
+    protected string $feature = 'peserta';
 
-    public function jenisKartu($jenisKartu)
+    public function jenisKartu($jenisKartu): static
     {
         $this->feature .= "/{$jenisKartu}";
 

@@ -1,22 +1,22 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class Kunjungan extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'kunjungan';
+    protected string $feature = 'kunjungan';
 
-    public function rujukan($nomorKunjungan)
+    public function rujukan($nomorKunjungan): static
     {
         $this->feature .= "/rujukan/{$nomorKunjungan}";
 
         return $this;
     }
 
-    public function riwayat($nomorKartu)
+    public function riwayat($nomorKartu): static
     {
         $this->feature .= "/peserta/{$nomorKartu}";
 

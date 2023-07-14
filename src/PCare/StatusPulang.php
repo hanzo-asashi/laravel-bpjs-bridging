@@ -1,15 +1,15 @@
 <?php
 
-namespace AamDsam\Bpjs\PCare;
+namespace HanzoAsashi\LaravelBpjsBridging\PCare;
 
 class StatusPulang extends PcareService
 {
     /**
      * @var string
      */
-    protected $feature = 'statuspulang';
+    protected string $feature = 'statuspulang';
 
-    public function rawatInap($status = true)
+    public function rawatInap($status = true): static
     {
         $this->feature .= "/rawatInap/{$status}";
 

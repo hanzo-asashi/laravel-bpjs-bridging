@@ -1,10 +1,10 @@
 <?php
 
-namespace AamDsam\Bpjs\VClaim;
+namespace HanzoAsashi\LaravelBpjsBridging\VClaim;
 
-use AamDsam\Bpjs\BpjsService;
+use HanzoAsashi\LaravelBpjsBridging\LaravelBpjsBridging;
 
-class Rujukan extends BpjsService
+class Rujukan extends LaravelBpjsBridging
 {
     public function insertRujukan($data = [])
     {
