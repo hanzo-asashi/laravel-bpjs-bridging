@@ -4,6 +4,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/hanzoasashi/laravel-bpjs-bridging/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/hanzo-asashi/laravel-bpjs-bridging/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/hanzo-asashi/laravel-bpjs-bridging/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/hanzo-asashi/laravel-bpjs-bridging/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/hanzo-asashi/laravel-bpjs-bridging.svg?style=flat-square)](https://packagist.org/packages/hanzo-asashi/laravel-bpjs-bridging)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhanzo-asashi%2Flaravel-bpjs-bridging.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhanzo-asashi%2Flaravel-bpjs-bridging?ref=badge_shield)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -74,3 +75,6 @@ Please review [our security policy](../../security/policy) on how to report secu
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhanzo-asashi%2Flaravel-bpjs-bridging.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhanzo-asashi%2Flaravel-bpjs-bridging?ref=badge_large)
